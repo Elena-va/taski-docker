@@ -11,8 +11,7 @@ server {
   }
  
   location / {
-    proxy_set_header Host $http_host;    
     alias /staticfiles/;
-    try_files $uri $uri/ index.html;
+    index index.html;
   }
 }
